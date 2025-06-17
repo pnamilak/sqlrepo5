@@ -14,5 +14,5 @@ jobs:
           curl -X POST \
             -H "Accept: application/vnd.github+json" \
             -H "Authorization: Bearer ${{ secrets.CENTRAL_PAT }}" \
-            https://api.github.com/repos/<your-username>/sql-central-runner/dispatches \
+            https://api.github.com/repos/pnamilak/sql-central-runner/dispatches \
             -d '{"event_type":"sql_update","client_payload":{"repo":"'"${{ github.repository }}"'"}}'
