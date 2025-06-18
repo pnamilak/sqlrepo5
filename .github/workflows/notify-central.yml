@@ -1,18 +1,16 @@
 name: Notify Central
 
 on:
-  push:
-    paths:
-      - '**/*.sql'
+  push:  # or workflow_dispatch
 
 jobs:
-  notify:
+  trigger-run-sql:
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger central runner
+      - name: Dispatch event to centralrepo repo
         run: |
           curl -X POST \
             -H "Accept: application/vnd.github+json" \
-            -H "Authorization: Bearer ${{ secrets.CENTRAL_PAT }}" \
+            -H "Authorization: token ${{ secrets.CENTRAL_PAT }}" \
             https://api.github.com/repos/pnamilak/centralrepo/dispatches \
-            -d '{"event_type":"sql_update","client_payload":{"repo":"'"${{ github.repository }}"'"}}'
+            -d '{"event_type":"sql_update","client_payload":{"repo":"pnamilak/sql_update"}}'
