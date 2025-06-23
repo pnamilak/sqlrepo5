@@ -1,2 +1,2 @@
 -- scripts/create_table.sql
-CREATE TABLE Test5 (ID INT PRIMARY KEY);
+CREATE TABLE Test422 (ID INT PRIMARY KEY);
