@@ -1,0 +1,8 @@
+use [master]
+GO
+create procedure test1
+as
+begin
+select * from sysprocesses
+end
+GO
