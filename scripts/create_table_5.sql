@@ -8,7 +8,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE TABLE [dbo].[MatchGames](
+CREATE TABLE [dbo].[MatchGames22](
 	[GameID] [int] IDENTITY(1,1) NOT NULL,
 	[MatchID] [int] NULL,
 	[SetNumber] [int] NULL,
