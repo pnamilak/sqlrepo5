@@ -3,7 +3,7 @@ name: Notify Central Repo
 on:
   push:
     paths:
-      - '**.sql'
+      - '**/*.sql'
 
 jobs:
   notify:
